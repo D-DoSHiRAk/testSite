@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
         toggle.textContent = video.muted ? "🔇" : "🔊";
     });
 
-    // Автоматическое воспроизведение, если элемент в зоне видимости
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {

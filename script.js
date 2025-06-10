@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function setPositionByIndex() {
-        currentTranslate = -currentIndex * slideWidth;
+        currentTranslate = -currentIndex * slideWidth + slideWidth * 0.1 * (currentIndex + 0.5);
         prevTranslate = currentTranslate;
         track.style.transition = 'transform 0.3s ease';
         setSliderPosition();

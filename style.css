@@ -57,7 +57,7 @@ body::before {
     display: flex;
     transition: transform 0.3s ease;
     will-change: transform;
-    height: 94%;
+    height: 85%;
 }
 
 .carousel-track img,
@@ -112,7 +112,7 @@ body::before {
 }
 
 .buttons {
-    margin-top: 15px;
+    margin-top: -50px;
     display: flex;
     justify-content: space-around;
 }

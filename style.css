@@ -34,7 +34,6 @@ body::before {
 .container {
     top: 10px;
     max-width: 480px;
-    height: 650px;
     margin: 0 auto;
     padding: 10px;
     box-sizing: border-box;
@@ -113,10 +112,9 @@ body::before {
 }
 
 .buttons {
-    position: relative;
-    top: -90px;
-    width: 1000px;
-    z-index: 2;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 
 button {
@@ -130,7 +128,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     flex: 1;
-    margin: 10px 5px;
+    margin: 0px 5px;
     transition: background-color 0.2s;
 }
 
@@ -200,7 +198,7 @@ button:hover {
 
 @media (max-width: 480px) {
     .carousel {
-        height: 650px;
+        height: 500px;
     }
     button {
         font-size: 18px;

@@ -34,6 +34,7 @@ body::before {
 .container {
     top: 10px;
     max-width: 480px;
+    height: 650px;
     margin: 0 auto;
     padding: 10px;
     box-sizing: border-box;
@@ -112,9 +113,9 @@ body::before {
 }
 
 .buttons {
-    margin-top: -50px;
-    display: flex;
-    justify-content: space-around;
+    position: relative;
+    top: -90px; /* регулируй это значение в зависимости от высоты карусели */
+    z-index: 2;
 }
 
 button {
@@ -128,7 +129,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     flex: 1;
-    margin: 0 5px;
+    margin: 10px 5px;
     transition: background-color 0.2s;
 }
 

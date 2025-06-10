@@ -114,7 +114,8 @@ body::before {
 
 .buttons {
     position: relative;
-    top: -90px; /* регулируй это значение в зависимости от высоты карусели */
+    top: -90px;
+    width: 1000px;
     z-index: 2;
 }
 

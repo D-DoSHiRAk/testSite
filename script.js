@@ -63,14 +63,12 @@ document.addEventListener("DOMContentLoaded", function() {
         setSliderPosition();
     }
 
-    // Слушатели на карусель целиком, чтобы работать и с мышью и с тачами
     carousel.addEventListener('touchstart', touchStart);
     carousel.addEventListener('touchmove', touchMove);
     carousel.addEventListener('touchend', touchEnd);
 
     carousel.addEventListener('mousedown', (event) => {
         touchStart(event);
-        // Добавляем слушатели на window, чтобы ловить mousemove/mouseup за пределами карусели
         window.addEventListener('mousemove', touchMove);
         window.addEventListener('mouseup', onMouseUp);
     });

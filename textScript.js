@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
     closeSpecs.addEventListener('click', closeModals);
     overlay.addEventListener('click', closeModals);
 
-    // Закрытие по ESC
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModals();
     });

@@ -195,6 +195,7 @@ button:hover {
     display: block;
 }
 
+
 @media (max-width: 480px) {
     .carousel {
         height: 500px;

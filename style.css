@@ -179,7 +179,7 @@ button:hover {
 
 @media (max-width: 480px) {
     .carousel {
-        height: 500px;
+        height: 450px;
     }
     button {
         font-size: 18px;

@@ -200,7 +200,7 @@ button:hover {
 
 @media (max-width: 480px) {
     .carousel {
-        height: 500px;
+        height: 650px;
     }
     button {
         font-size: 18px;

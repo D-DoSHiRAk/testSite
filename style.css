@@ -102,7 +102,8 @@ body::before {
 button {
     font-family: 'B52', serif !important;
     padding: 12px 20px;
-    font-size: 20px;
+    height: 60px;
+    font-size: 21px;
     border: none;
     background: #922121;
     color: white;
@@ -133,6 +134,10 @@ button:hover {
     display: none;
     z-index: 1000;
     box-sizing: border-box;
+
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 .modal.active {
@@ -177,7 +182,7 @@ button:hover {
         height: 500px;
     }
     button {
-        font-size: 14px;
+        font-size: 18px;
         padding: 10px 12px;
     }
 }

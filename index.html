@@ -1,49 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes" />
-    <title>Товар с каруселью</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Выбор ПВЗ СДЭК</title>
 </head>
 <body>
-<div class="container">
-    <div class="carousel" id="carousel">
-        <div class="carousel-track" id="carousel-track">
-            <img src="assets/gamesRes/kingsbridge/image1.jpg" alt="Image 1" />
-            <div class="video-wrapper">
-                <video id="carousel-video" src="assets/gamesRes/kingsbridge/video.mp4" muted loop></video>
-                <button class="sound-toggle" id="sound-toggle">🔇</button>
-            </div>
-            <img src="assets/gamesRes/kingsbridge/image2.jpg" alt="Image 2" />
-            <img src="assets/gamesRes/kingsbridge/image3.jpg" alt="Image 3" />
-            <img src="assets/gamesRes/kingsbridge/image4.jpg" alt="Image 4" />
-            <img src="assets/gamesRes/kingsbridge/image5.jpg" alt="Image 5" />
-            <img src="assets/gamesRes/kingsbridge/image6.jpg" alt="Image 6" />
-        </div>
-    </div>
+<div id="cdek-widget"></div>
 
-    <div class="buttons">
-        <button id="btn-description">Описание товара</button>
-        <button id="btn-specs">Характеристики</button>
-    </div>
-</div>
-
-<div class="overlay" id="overlay"></div>
-
-<div class="modal" id="modal-description">
-    <div class="modal-close" id="close-description">&times;</div>
-    <div class="modal-header">Описание товара</div>
-    <div id="description-content">Загрузка...</div>
-</div>
-
-<div class="modal" id="modal-specs">
-    <div class="modal-close" id="close-specs">&times;</div>
-    <div class="modal-header">Характеристики товара</div>
-    <div id="specs-content">Загрузка...</div>
-</div>
-<script src="script.js"></script>
-<script src="textScript.js"></script>
-<script src="videoScript.js"></script>
+<script src="https://widget.cdek.ru/widget/js/widget.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        if (window.CDEKWidget) {
+            window.CDEKWidget.create({
+                defaultCity: "Москва",
+                cityFrom: "Москва",
+                country: "Россия",
+                onChoose: function (info) {
+                    console.log("Выбран ПВЗ:", info);
+                }
+            });
+        } else {
+            console.error("Виджет СДЭК не загружен");
+        }
+    });
+</script>
 </body>
 </html>

@@ -2,26 +2,23 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Выбор ПВЗ СДЭК</title>
+    <title>Виджет СДЭК</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://lk-widget.cdek.ru/widget/js/jquery.cdekwidget.min.js"></script>
 </head>
 <body>
-<div id="cdek-widget"></div>
+<input type="text" id="cdek_pvz" name="cdek_pvz" />
 
-<script src="https://widget.cdek.ru/widget/js/widget.js"></script>
 <script>
-    window.addEventListener('DOMContentLoaded', function () {
-        if (window.CDEKWidget) {
-            window.CDEKWidget.create({
-                defaultCity: "Москва",
-                cityFrom: "Москва",
-                country: "Россия",
-                onChoose: function (info) {
-                    console.log("Выбран ПВЗ:", info);
-                }
-            });
-        } else {
-            console.error("Виджет СДЭК не загружен");
-        }
+    $(document).ready(function () {
+        $('#cdek_pvz').cdekWidget({
+            defaultCity: 'Москва',
+            cityFrom: 'Москва',
+            hide_delivery: true,
+            onChoose: function (info) {
+                console.log('ПВЗ выбран:', info);
+            }
+        });
     });
 </script>
 </body>
